@@ -1,7 +1,13 @@
 const boardContainer = document.querySelector("#boardContainer");
 const addBoardButton = document.querySelector("#addBoardButton");
 const submitButton = document.querySelector("#submitButton");
-// const boardName =document.querySelector("#name");
+
+
+// creating deleteItem function
+const deleteItems = (e) => {
+    e.target.parentElement.parentElement.parentElement.firstElementChild.lastChild.innerText = `${e.target.parentElement.parentElement.children.length - 1}`;
+    e.target.parentElement.remove();
+}
 
 // create item
 const createItem = (e) => {
@@ -21,6 +27,7 @@ const createItem = (e) => {
     boardItemDeleteBtn.classList.add("delete-item-button");
     boardItemDeleteBtn.innerText = "Delete";
     boardItem.appendChild(boardItemDeleteBtn);
+    boardItemDeleteBtn.addEventListener("click", deleteItems)
     
     if (e.target.parentElement.children[0].id === "plusIcon") {
         e.target.parentElement.children[0].parentElement.parentElement.children[2].appendChild(boardItem);
