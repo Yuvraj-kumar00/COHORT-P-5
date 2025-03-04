@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KANBAN-BOARD PROJECT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- BOARD CONTAINER -->
+    <div class="board-container" id="boardContainer">
+
+        <!-- FIRST BOARD -->
+         <!-- <div class="board">
+
+            <div class="board-headings">
+                <div class="board-color-picker"></div>
+                <div class="board-name">Test Board</div>
+                <div class="total-items">2</div>
+            </div>
+            <p class="board-description">This is a test board</p>
+
+            <div class="board-item-container">
+                <div class="board-item">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, illo?</p>
+                    <button class="delete-item-button">Delete</button>
+                </div>
+                <div class="board-item">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, illo?</p>
+                    <button class="delete-item-button">Delete</button>
+                </div>
+            </div>
+
+            <button class="add-item-button"><span>+</span> Add item</button>
+
+         </div> -->
+
+        <!-- SECOND BOARD -->
+        <!-- <div class="board">
+
+            <div class="board-headings">
+                <div class="board-color-picker"></div>
+                <div class="board-name">Test Board</div>
+                <div class="total-items">2</div>
+            </div>
+            <p class="board-description">This is a test board</p>
+
+            <div class="board-item-container">
+                <div class="board-item">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, illo?</p>
+                    <button class="delete-item-button">Delete</button>
+                </div>
+                <div class="board-item">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, illo?</p>
+                    <button class="delete-item-button">Delete</button>
+                </div>
+            </div>
+
+            <button class="add-item-button"><span>+</span> Add item</button>
+
+         </div> -->
+
+    </div>
+
+    <!-- POPUP CARD -->
+    <div class="popup-card" id="popupCard">
+        <h2>Title</h2>
+
+        <div class="board-name-container">
+            <label for="name" class="board-name-label">Name</label>
+            <input type="text" id="name" class="board-name-input">
+        </div>
+
+        <div class="board-color-container">
+            <h3>Colors</h3>
+            <div class="board-color-boxes">
+                <div class="color-box" id="color-box-1"></div>
+                <div class="color-box" id="color-box-2"></div>
+                <div class="color-box" id="color-box-3"></div>
+                <div class="color-box" id="color-box-4"></div>
+                <div class="color-box" id="color-box-5"></div>
+            </div>
+        </div>
+
+        <div class="board-description-container">
+            <label for="description" class="board-description-label">Description</label>
+            <input type="text" id="description" class="board-description-input">
+        </div>
+
+        <div class="popup-button-container">
+            <button class="cancel-popup-card popup-button">Cancel</button>
+            <button class="submit-popup-card popup-button" id="submitButton">Submit</button>
+        </div>
+    </div>
+
+    <!-- ADD BOARD BUTTON -->
+    <div class="add-board-button" id="addBoardButton">+</div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
