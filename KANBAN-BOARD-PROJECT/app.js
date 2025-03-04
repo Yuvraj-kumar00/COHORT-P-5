@@ -16,6 +16,15 @@ const createItem = (e) => {
     // creating board-item div
     const boardItem = document.createElement("div");
     boardItem.classList.add("board-item");
+    boardItem.setAttribute("draggable", true);
+
+    boardItem.addEventListener("dragstart", () => {
+        boardItem.classList.add("flying");
+    });
+
+    boardItem.addEventListener("dragend", () => {
+        boardItem.classList.remove("flying");
+    })
 
     // creating show board-item creation time para
     let timer = new Date();
@@ -109,6 +118,15 @@ const createBoards = () => {
 
     name.value = "";
     description.value = "";
+
+    // board over
+    const allBoardItemContainer = document.querySelectorAll(".board-item-container");
+    allBoardItemContainer.forEach( (boardItemContainer) => {
+        boardItemContainer.addEventListener("dragover", () => {
+            boardItemContainer.appendChild(document.querySelector(".flying"))
+        })
+    })
+
 }
 
 // show popupCard

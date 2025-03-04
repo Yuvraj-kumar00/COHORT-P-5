@@ -71,6 +71,7 @@ body {
     /* background-color: teal; */
     width: 100%;
     margin-bottom: 40px;
+    min-height: 75vh;
 }
 
 .board-item {
