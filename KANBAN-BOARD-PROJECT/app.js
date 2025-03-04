@@ -16,7 +16,14 @@ const createItem = (e) => {
     // creating board-item div
     const boardItem = document.createElement("div");
     boardItem.classList.add("board-item");
-    
+
+    // creating show board-item creation time para
+    let timer = new Date();
+    const showBoardItemCreationTime = document.createElement("p");
+    showBoardItemCreationTime.classList.add("board-item-creation-time");
+    showBoardItemCreationTime.innerText = `${timer.toLocaleString()}`;
+    boardItem.appendChild(showBoardItemCreationTime);
+
     // creating board-item para
     const boardItemPara = document.createElement("p");
     boardItemPara.innerText = `${userTask}`;
